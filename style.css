@@ -11,6 +11,12 @@ body {
   justify-content: center;
 }
 
+article > header,
+footer > header,
+dl > dt {
+  display: none;
+}
+
 h1 {
   margin: 0;
   padding: 0;
@@ -30,41 +36,115 @@ main {
   background: #fff;
   background: linear-gradient(190deg, #fff 50%, #050c20 50%);
   padding: 2rem;
+
+  > header {
+    display: flex;
+    justify-content: center;
+    color: #f27200;
+    padding-bottom: 1rem;
+  }
+
+  > section {
+    display: flex;
+    min-width: 300px;
+    max-width: 1000px;
+    padding: 0 0.5rem 0 0.5rem;
+
+    > section:nth-child(1) {
+      width: calc(50rem * 0.3);
+      padding-right: 2rem;
+      display: flex;
+      flex-direction: column;
+
+      > section:nth-child(3) > p {
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: large;
+        padding: 2rem 0;
+
+        > strong {
+          font-size: larger;
+        }
+      }
+
+      > section:nth-child(4) {
+        display: flex;
+        justify-content: center;
+
+        > img {
+          border-radius: 50%;
+          background-color: #fff;
+          width: calc(50rem * 0.25);
+        }
+      }
+    }
+
+    > section:nth-child(2) {
+      border: 2px solid #f27200;
+      background-color: #fff;
+
+      h2 {
+        padding: 0.5rem 0 0 0.5rem;
+        margin: 0;
+        font-weight: 100;
+        font-style: italic;
+        font-size: medium;
+      }
+
+      > section:nth-child(even) > * {
+        background-color: #f27200;
+        color: #fff;
+      }
+
+      > section > section {
+        display: grid;
+        grid-template-columns: 7rem 15rem auto;
+        grid-template-rows: 0.2fr auto;
+        grid-template-areas:
+          "year title company"
+          ". tasks .";
+        padding: 0.5rem;
+
+        > p {
+          padding: 0;
+          margin: 0;
+        }
+
+        > p:nth-child(1) {
+          grid-area: year;
+          text-align: left;
+          padding-left: 0.2rem;
+          padding-right: 1rem;
+        }
+
+        > p:nth-child(2) {
+          grid-area: title;
+        }
+
+        > p:nth-child(3) {
+          grid-area: company;
+          text-align: right;
+          padding-right: 0.2rem;
+        }
+
+        > ul {
+          grid-area: tasks;
+        }
+      }
+    }
+  }
 }
 
-main > header {
-  display: flex;
-  justify-content: center;
-  color: #f27200;
-  padding-bottom: 1rem;
-}
+article {
+  > p {
+    margin: 0;
+  }
 
-main > section {
-  display: flex;
-  min-width: 300px;
-  max-width: 1000px;
-  padding: 0 0.5rem 0 0.5rem;
-}
-
-main > section > section:nth-child(1) {
-  width: calc(50rem * 0.3);
-  padding-right: 2rem;
-  display: flex;
-  flex-direction: column;
-}
-
-article > header,
-footer > header,
-dl > dt {
-  display: none;
-}
-
-article > p {
-  margin: 0;
-}
-
-article > aside > p > small {
-  font-size: medium;
+  > aside > p > small {
+    font-size: medium;
+  }
 }
 
 dl {
@@ -74,38 +154,14 @@ dl {
   flex-wrap: wrap;
   transform: rotate(10deg);
   padding-left: 0.5rem;
-}
 
-dl > dd {
-  padding: 0 0.2rem;
-  margin: 0;
-  text-transform: uppercase;
-  font-weight: 100;
-  font-size: small;
-}
-
-main > section > section:nth-child(1) > section:nth-child(3) > p {
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: large;
-  padding: 2rem 0;
-}
-
-main > section > section:nth-child(1) > section:nth-child(3) > p > strong {
-  font-size: larger;
-}
-
-main > section > section:nth-child(1) > section:nth-child(4) {
-  display: flex;
-  justify-content: center;
-}
-
-main > section > section:nth-child(1) > section:nth-child(4) > img {
-  border-radius: 50%;
-  background-color: #fff;
-  width: calc(50rem * 0.25);
+  > dd {
+    padding: 0 0.2rem;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 100;
+    font-size: small;
+  }
 }
 
 footer {
@@ -117,63 +173,8 @@ footer {
 
 a {
   color: #fff;
-}
 
-a:hover {
-  font-size: larger;
-}
-
-main > section > section:nth-child(2) {
-  border: 2px solid #f27200;
-  background-color: #fff;
-}
-
-main > section > section:nth-child(2) h2 {
-  padding: 0.5rem 0 0 0.5rem;
-  margin: 0;
-  font-weight: 100;
-  font-style: italic;
-  font-size: medium;
-}
-
-main > section > section:nth-child(2) > section:nth-child(even) > * {
-  background-color: #f27200;
-  color: #fff;
-}
-
-main > section > section:nth-child(2) > section > section {
-  display: grid;
-  grid-template-columns: 7rem 15rem auto;
-  grid-template-rows: 0.2fr auto;
-  grid-template-areas:
-    "year title company"
-    ". tasks .";
-
-  padding: 0.5rem;
-}
-
-main > section > section:nth-child(2) > section > section > p {
-  padding: 0;
-  margin: 0;
-}
-
-main > section > section:nth-child(2) > section > section > p:nth-child(1) {
-  grid-area: year;
-  text-align: left;
-  padding-left: 0.2rem;
-  padding-right: 1rem;
-}
-
-main > section > section:nth-child(2) > section > section > p:nth-child(2) {
-  grid-area: title;
-}
-
-main > section > section:nth-child(2) > section > section > p:nth-child(3) {
-  grid-area: company;
-  text-align: right;
-  padding-right: 0.2rem;
-}
-
-main > section > section:nth-child(2) > section > section > ul {
-  grid-area: tasks;
+  &:hover {
+    font-size: larger;
+  }
 }
