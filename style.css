@@ -1,3 +1,10 @@
+:root {
+  --color-light-grey: #eee;
+  --color-orange: #f27200;
+  --color-dark-purple: #050c20;
+  --color-white: #fff;
+}
+
 html {
   font-family: "Nunito Sans", sans-serif;
 }
@@ -6,7 +13,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background: #eee;
+  background: var(--color-light-grey);
   align-items: center;
   justify-content: center;
 }
@@ -33,14 +40,18 @@ main {
   height: calc(50rem * 1.41);
   display: flex;
   flex-direction: column;
-  background: #fff;
-  background: linear-gradient(190deg, #fff 50%, #050c20 50%);
+  background: var(--color-white);
+  background: linear-gradient(
+    190deg,
+    var(--color-white) 50%,
+    var(--color-dark-purple) 50%
+  );
   padding: 2rem;
 
   > header {
     display: flex;
     justify-content: center;
-    color: #f27200;
+    color: var(--color-orange);
     padding-bottom: 1rem;
   }
 
@@ -57,7 +68,7 @@ main {
       flex-direction: column;
 
       > section:nth-child(3) > p {
-        color: #fff;
+        color: var(--color-white);
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -75,15 +86,15 @@ main {
 
         > img {
           border-radius: 50%;
-          background-color: #fff;
+          background-color: var(--color-white);
           width: calc(50rem * 0.25);
         }
       }
     }
 
     > section:nth-child(2) {
-      border: 2px solid #f27200;
-      background-color: #fff;
+      border: 2px solid var(--color-orange);
+      background-color: var(--color-white);
 
       h2 {
         padding: 0.5rem 0 0 0.5rem;
@@ -94,8 +105,8 @@ main {
       }
 
       > section:nth-child(even) > * {
-        background-color: #f27200;
-        color: #fff;
+        background-color: var(--color-orange);
+        color: var(--color-white);
       }
 
       > section > section {
@@ -168,11 +179,11 @@ footer {
   display: flex;
   justify-content: center;
   padding-top: 4rem;
-  color: #fff;
+  color: var(--color-white);
 }
 
 a {
-  color: #fff;
+  color: var(--color-white);
 
   &:hover {
     font-size: larger;
