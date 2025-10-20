@@ -47,8 +47,7 @@ main {
   );
   padding: 2rem;
   display: grid;
-  row-gap: 1rem;
-  column-gap: 1rem;
+  gap: 1rem;
   grid-template: "resume-header resume-header" 3rem "profile experience" auto / 0.3fr 0.7fr;
 }
 
