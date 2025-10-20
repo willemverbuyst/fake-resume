@@ -4,13 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "lint:css": "stylelint '**/*.css'"
+    "lint:css": "stylelint '**/*.css'",
+    "lint:html": "htmlhint '**/*.html'"
   },
   "keywords": [],
   "author": "Willem Verbuyst",
   "license": "ISC",
   "packageManager": "pnpm@10.10.0",
   "devDependencies": {
+    "htmlhint": "^1.7.1",
     "stylelint": "^16.25.0",
     "stylelint-config-standard": "^39.0.1"
   }
