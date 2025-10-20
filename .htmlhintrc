@@ -6,6 +6,7 @@
   "tag-pair": true,
   "id-unique": true,
   "spec-char-escape": true,
-  "head-script-disabled": false,
-  "style-disabled": false
+  "src-not-empty": true,
+  "attr-no-duplication": true,
+  "title-require": true
 }

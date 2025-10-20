@@ -1,3 +1,3 @@
-A fake resume with html (semantic) and css (not using ids or classes)
+A fake resume built with semantic html and css
 
 ![screenshot](./screenshot.png)
