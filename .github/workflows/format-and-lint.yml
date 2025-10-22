@@ -1,4 +1,4 @@
-name: Format and Lint Code
+name: Format and Lint
 
 on:
   pull_request:
@@ -9,8 +9,8 @@ permissions:
   pull-requests: write
 
 jobs:
-  code-style:
-    name: Format, Lint
+  format-and-lint-code:
+    name: Format & Lint Code
     runs-on: ubuntu-latest
 
     steps:
