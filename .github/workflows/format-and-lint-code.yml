@@ -37,6 +37,9 @@ jobs:
       - name: 🧪 Run html linter
         run: pnpm lint:html
 
+      - name: 🧪 Run markdown linter
+        run: pnpm lint:md
+
   lint-actions:
     name: Lint Actions
     runs-on: ubuntu-latest
