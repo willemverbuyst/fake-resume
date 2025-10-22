@@ -63,7 +63,7 @@ main {
   grid-area: profile;
   display: grid;
   row-gap: 1rem;
-  grid-template: "profile-introduction" .45fr "profile-details" .55fr / 1fr;
+  grid-template: "profile-introduction" 0.45fr "profile-details" 0.55fr / 1fr;
 }
 
 #profile-introduction {
