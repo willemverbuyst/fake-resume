@@ -14,7 +14,7 @@
   "license": "ISC",
   "packageManager": "pnpm@10.10.0",
   "devDependencies": {
-    "htmlhint": "^1.7.1",
+    "htmlhint": "^1.8.1",
     "markdownlint-cli2": "^0.20.0",
     "prettier": "^3.8.1",
     "stylelint": "^16.25.0",
