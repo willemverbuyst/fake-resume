@@ -3,7 +3,7 @@ updates:
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
-      interval: "weekly"
+      interval: "semiannually"
       day: "sunday"
       time: "02:00"
     open-pull-requests-limit: 10
@@ -15,7 +15,7 @@ updates:
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
-      interval: "weekly"
+      interval: "semiannually"
       day: "sunday"
       time: "02:00"
     open-pull-requests-limit: 10
